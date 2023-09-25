@@ -1,0 +1,130 @@
+#google_translate_element select {
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #696969;
+    transition: all 0.35s ease;
+    font-family: "Saira", sans-serif;
+    background-color: #F5F5F5;
+    border: none !important;
+}
+
+
+.font-sans {
+    position: relative;
+    top: 0 !important;
+    border: none !important;
+}
+
+.goog-logo-link {
+    display: none;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame,
+div#goog-gt- {
+    display: none !important;
+}
+
+.goog-text-highlight {
+
+    box-shadow: none !important;
+    background-color: #F5F5F5 !important;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-logo-link,
+.goog-te-gadget span {
+
+    display: none !important;
+
+}
+
+.goog-te-gadget {
+
+    color: transparent !important;
+    font-size: 0;
+
+
+}
+
+#google_translate_element select {
+
+    border: none;
+
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.VIpgJd-ZVi9od-ORHb-OEVmcd {
+
+    display: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple img,
+img.goog-te-gadget-icon,
+.goog-te-menu-value span,
+.goog-text-highlight {
+    display: none !important;
+}
+
+
+.goog-te-gadget-simple:before {
+    content: 'Language';
+
+}
+
+/* #google_translate_element {
+    margin: 10px;
+}
+
+.goog-te-gadget-simple:before {
+    content: 'Translator';
+    font-size: 12px;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-simple img,
+img.goog-te-gadget-icon,
+.goog-te-menu-value span,
+.goog-text-highlight {
+    display: none !important;
+}
+
+.goog-te-menu-frame,
+.goog-te-balloon-frame {
+    box-shadow: none !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 10px -7px rgba(0, 0, 0, 0.2);
+    font-size: 0;
+}
+
+body {
+    top: 0px !important;
+} */
