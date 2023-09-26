@@ -16,7 +16,7 @@ function AuctionDetailsTab(props) {
       BASE_URL +
       "/categories/" +
       props.auction?.product.category_id +
-      "/auctions/?limit=2&status=live";
+      "/auctions?limit=2&status=live";
     fetch(getAuction)
       .then((response) => {
         if (!response.ok) {
@@ -35,7 +35,7 @@ function AuctionDetailsTab(props) {
   const [bidingHistory, setBidingHistory] = useState([]);
   const bidHisting = () => {
     const getBiddings =
-      BASE_URL + "/auctions/" + props.auction?.id + "/bids/?limit=5";
+      BASE_URL + "/auctions/" + props.auction?.id + "/bids?limit=5";
     fetch(getBiddings)
       .then((response) => {
         if (!response.ok) {

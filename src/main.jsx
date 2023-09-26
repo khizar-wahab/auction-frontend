@@ -25,6 +25,7 @@ import Success from "./components/page/Success";
 import Cancel from "./components/page/Cancel";
 import ForgetPassword from "./components/page/ForgetPassword/ForgetPassword";
 import ResetPassword from "./components/page/ForgetPassword/ResetPassword";
+import "bootstrap";
 
 const components = [
   { path: "/", component: <MainLayout/> },

@@ -98,7 +98,7 @@ function LiveAuctionHome1() {
                 {Array(3)
                   .fill(undefined)
                   .map((_, index) => (
-                    <SwiperSlide className="swiper-slide">
+                    <SwiperSlide className="swiper-slide" key={index}>
                     < div className="c-feature-card1 wow animate fadeInDown" data-wow-duration="1.5s" data-wow-delay="0.2s">
                       <div className="skeleton-centered mt-0">
                         <Skeleton height={420} width={428} />

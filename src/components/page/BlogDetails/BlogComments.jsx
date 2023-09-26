@@ -52,7 +52,7 @@ function BlogComments(props) {
         </div>
         <ul className="comment-list mb-50">
           {comments?.map(comment => (
-            <li>
+            <li key={comment.id}>
               <div className="comment-box">
                 <div className="comment-header d-flex justify-content-between align-items-center">
                   <div className="author d-flex flex-wrap">
@@ -70,7 +70,7 @@ function BlogComments(props) {
               {comment.children.length && (
                 <ul className="comment-reply">
                   {comment.children.map(child => (
-                    <li>
+                    <li key={child.id}>
                       <div className="comment-box">
                         <div className="comment-header d-flex justify-content-between align-items-center">
                           <div className="author d-flex flex-wrap">

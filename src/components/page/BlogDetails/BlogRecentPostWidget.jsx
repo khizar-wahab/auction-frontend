@@ -41,7 +41,7 @@ function BlogRecentPostWidget(props) {
           <div className="blog-widget-body">
             <ul className="recent-post">
               {posts?.filter(post => post.id !== props.skipId).map(post => (
-                <li className="single-post">
+                <li key={post.id} className="single-post">
                   <div className="post-img">
                     <Link to={`/blog-details/${post.id}`} onClick={scrollTop}><img alt="images" src={post.image_url} /></Link>
                   </div>
