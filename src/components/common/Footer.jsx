@@ -34,7 +34,7 @@ function Footer(props) {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
   return (
     <>
-      <footer>
+      <footer style={{backgroundImage: 'none'}}>
         <div className="footer-top">
           <div className="container">
             <div className="row gy-5">

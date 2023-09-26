@@ -38,6 +38,7 @@ function Catagory() {
   const scrollTop = window.scrollTo({ top: 0, behavior: "smooth" })
   const caragorySlider = {
     slidesPerView: 1,
+    
     speed: 1000,
     spaceBetween: 30,
     loop: false,
@@ -49,8 +50,10 @@ function Catagory() {
     },
 
     breakpoints: {
-      280: {
-        slidesPerView: 1
+      320: {
+        slidesPerView: 2,
+       
+       
       },
       440: {
         slidesPerView: 2
