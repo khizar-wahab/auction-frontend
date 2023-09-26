@@ -70,7 +70,7 @@ function AuctionDetailsInfo({ auction, onBid, onCurrentPriceChange }) {
   const startUpdatingCurrentPrice = () => {
     let requestExists = false;
 
-    currentPriceUpdateInterval = setInterval(async () => {
+    currentPriceUpdateInterval.current = setInterval(async () => {
       if (requestExists) return;
 
       requestExists = true;
