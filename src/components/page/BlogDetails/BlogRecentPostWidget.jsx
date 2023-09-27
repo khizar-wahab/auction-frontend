@@ -9,7 +9,7 @@ function BlogRecentPostWidget(props) {
   const [posts, setPosts] = useState([]);
 
   const getData = () => {
-    const endpoint = BASE_URL + '/articles?limit=3';
+    const endpoint = import.meta.env.APP_API_BASE_URL + '/articles?limit=3';
     fetch(endpoint)
       .then(response => {
         if (!response.ok) {

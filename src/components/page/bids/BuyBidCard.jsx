@@ -7,7 +7,7 @@ function BuyBidCard(props) {
   const token = localStorage.getItem('token');
   const makePayment = async (price,id) => {
     try {
-      const response = await axios.post(BASE_URL+'/buy-bids', {
+      const response = await axios.post(import.meta.env.APP_API_BASE_URL+'/buy-bids', {
         amount: price,
         id: id,
       },{

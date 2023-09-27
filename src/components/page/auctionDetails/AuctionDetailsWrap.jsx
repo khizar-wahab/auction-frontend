@@ -12,7 +12,7 @@ function AuctionDetailsWrap(props) {
   });
 
   useEffect(() => {
-    const getAuction = BASE_URL + '/auctions/' + props.id;
+    const getAuction = import.meta.env.APP_API_BASE_URL + '/auctions/' + props.id;
     fetch(getAuction)
       .then(response => {
         if (!response.ok) {

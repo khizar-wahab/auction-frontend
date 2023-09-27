@@ -8,7 +8,7 @@ function BlogPostCategory() {
   const [data, setData] = useState([]);
 
   const getData = () => {
-    const endpoint = BASE_URL + `/get-article-category`;
+    const endpoint = import.meta.env.APP_API_BASE_URL + `/get-article-category`;
 
     fetch(endpoint)
       .then(response => {

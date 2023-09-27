@@ -14,7 +14,7 @@ function ContentOfpurchase() {
   const [filterOption, setFilterOption] = useState(null);
 
   useEffect(() => {
-    const getPurchases = BASE_URL + '/purchase-order' + (filterOption ? `?limit=${filterOption}` : ``);
+    const getPurchases = import.meta.env.APP_API_BASE_URL + '/purchase-order' + (filterOption ? `?limit=${filterOption}` : ``);
     const token = localStorage.getItem('token');
     fetch(getPurchases, {
       method: 'GET',
@@ -59,7 +59,7 @@ function ContentOfpurchase() {
   const makePayment = async (purchasePrice, orderID) => {
     try {
       setIsLoading(orderID);
-      const response = await axios.post(BASE_URL + '/paypal-charge', {
+      const response = await axios.post(import.meta.env.APP_API_BASE_URL + '/paypal-charge', {
         amount: purchasePrice,
         order_id: orderID,
       }, {

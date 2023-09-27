@@ -13,7 +13,7 @@ function AuctionDetailsTab(props) {
   
   useEffect(() => {
     const getAuction =
-      BASE_URL +
+      import.meta.env.APP_API_BASE_URL +
       "/categories/" +
       props.auction?.product.category_id +
       "/auctions?limit=2&status=live";
@@ -35,7 +35,7 @@ function AuctionDetailsTab(props) {
   const [bidingHistory, setBidingHistory] = useState([]);
   const bidHisting = () => {
     const getBiddings =
-      BASE_URL + "/auctions/" + props.auction?.id + "/bids?limit=5";
+      import.meta.env.APP_API_BASE_URL + "/auctions/" + props.auction?.id + "/bids?limit=5";
     fetch(getBiddings)
       .then((response) => {
         if (!response.ok) {

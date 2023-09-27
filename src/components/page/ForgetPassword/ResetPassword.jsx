@@ -50,7 +50,7 @@ export default function ResetPassword() {
 
         setLoading(true);
 
-        const endPoint = BASE_URL + '/change-password';
+        const endPoint = import.meta.env.APP_API_BASE_URL + '/change-password';
         fetch(endPoint, {
             method:'POST',
             headers: {

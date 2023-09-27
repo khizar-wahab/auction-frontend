@@ -20,7 +20,7 @@ function UpCommingHome1() {
 
 
   const getData = () => {
-    const getAuctions = BASE_URL + '/auctions?limit=6&status=upcoming';
+    const getAuctions = import.meta.env.APP_API_BASE_URL + '/auctions?limit=6&status=upcoming';
     fetch(getAuctions)
       .then(response => {
         if (!response.ok) {

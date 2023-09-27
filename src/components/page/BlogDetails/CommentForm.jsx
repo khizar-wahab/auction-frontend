@@ -50,7 +50,7 @@ function CommentForm(props) {
   const store = (data, onSuccess) => {
     setLoading(true);
 
-    fetch(`${BASE_URL}/articles/${props.postId}/comments`, {
+    fetch(`${import.meta.env.APP_API_BASE_URL}/articles/${props.postId}/comments`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

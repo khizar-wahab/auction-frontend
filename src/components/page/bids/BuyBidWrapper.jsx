@@ -5,7 +5,7 @@ import BuyBidCard from './BuyBidCard'
 function BuyBidWrapper() {
   const [bids, setBids] = useState([]);
   useEffect(() => {
-    const getBids = BASE_URL+'/get-bids';
+    const getBids = import.meta.env.APP_API_BASE_URL+'/get-bids';
     fetch(getBids, {
       method: 'GET'
     })

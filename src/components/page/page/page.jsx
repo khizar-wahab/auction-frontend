@@ -8,7 +8,7 @@ export default function Page() {
     const [pageData, setPageData] = useState(null);
 
     const getData = () => {
-        const endpoint = BASE_URL + `/page/${params.slug}`;
+        const endpoint = import.meta.env.APP_API_BASE_URL + `/page/${params.slug}`;
         fetch(endpoint)
             .then(response => {
                 if (!response.ok) {

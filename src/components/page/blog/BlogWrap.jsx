@@ -15,7 +15,7 @@ function BlogWrap() {
   const navigate = useNavigate();
 
   const getData = () => {
-    let endpoint = BASE_URL + `/articles?page=${url.searchParams.get('page') ? url.searchParams.get('page') : 1}`;
+    let endpoint = import.meta.env.APP_API_BASE_URL + `/articles?page=${url.searchParams.get('page') ? url.searchParams.get('page') : 1}`;
 
     if (url.searchParams.get('category')) {
       endpoint += `&category_id=${url.searchParams.get('category')}`;

@@ -8,7 +8,7 @@ function BlogComments(props) {
   const [comments, setComments] = useState([]);
 
   const getData = () => {
-    const endpoint = BASE_URL + `/articles/${props.postId}/comments`;
+    const endpoint = import.meta.env.APP_API_BASE_URL + `/articles/${props.postId}/comments`;
 
     fetch(endpoint)
       .then(response => {

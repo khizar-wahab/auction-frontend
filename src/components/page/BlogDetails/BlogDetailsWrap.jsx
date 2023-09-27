@@ -22,7 +22,7 @@ function BlogDetailsWrap() {
   const params = useParams();
 
   const getData = () => {
-    const endpoint = BASE_URL + `/articles/${params.id}`;
+    const endpoint = import.meta.env.APP_API_BASE_URL + `/articles/${params.id}`;
 
     fetch(endpoint)
       .then(response => {

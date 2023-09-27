@@ -22,9 +22,9 @@ function LiveAuctionWrap() {
     let status = url.searchParams.get('status') ? url.searchParams.get('status') : 'live';
 
     if (url.searchParams.get('category')) {
-      endpoint = BASE_URL + '/categories/' + url.searchParams.get('category') + `/auctions?status=${status}&page=${url.searchParams.get('page') ? url.searchParams.get('page') : 1}`;
+      endpoint = import.meta.env.APP_API_BASE_URL + '/categories/' + url.searchParams.get('category') + `/auctions?status=${status}&page=${url.searchParams.get('page') ? url.searchParams.get('page') : 1}`;
     } else {
-      endpoint = BASE_URL + `/auctions?status=${status}&page=${url.searchParams.get('page') ? url.searchParams.get('page') : 1}`;
+      endpoint = import.meta.env.APP_API_BASE_URL + `/auctions?status=${status}&page=${url.searchParams.get('page') ? url.searchParams.get('page') : 1}`;
     }
 
     fetch(endpoint)

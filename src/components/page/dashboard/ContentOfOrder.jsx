@@ -22,7 +22,7 @@ function ContentOfOrder() {
   const [selectedFilter, setSelectedFilter] = useState('');
 
   useEffect(() => {
-    const getBidding = `${BASE_URL}/order-biding${selectedFilter ? `?limit=${selectedFilter}` : ''}`;
+    const getBidding = `${import.meta.env.APP_API_BASE_URL}/order-biding${selectedFilter ? `?limit=${selectedFilter}` : ''}`;
     const token = localStorage.getItem('token');
     fetch(getBidding, {
       method: 'GET',

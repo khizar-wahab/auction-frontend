@@ -31,7 +31,7 @@ function AuctionDetailsInfo({ auction, onBid, onCurrentPriceChange }) {
     formData.auction_id = auction?.id;
     formData.product_id = auction?.product?.id;
     try {
-      const response = await fetch(BASE_URL + '/bids', {
+      const response = await fetch(import.meta.env.APP_API_BASE_URL + '/bids', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -74,7 +74,7 @@ function AuctionDetailsInfo({ auction, onBid, onCurrentPriceChange }) {
       if (requestExists) return;
 
       requestExists = true;
-      const res = await fetch(`${BASE_URL}/auctions/${auction.id}/current-price`, { method: 'GET' });
+      const res = await fetch(`${import.meta.env.APP_API_BASE_URL}/auctions/${auction.id}/current-price`, { method: 'GET' });
       if (!res.ok) {
         console.log("Failed to fetch current price");
       }

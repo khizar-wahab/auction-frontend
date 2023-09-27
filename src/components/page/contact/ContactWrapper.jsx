@@ -21,7 +21,7 @@ function ContactWrapper() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(BASE_URL + '/store', {
+      const response = await fetch(import.meta.env.APP_API_BASE_URL + '/store', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

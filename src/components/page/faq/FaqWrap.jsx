@@ -7,7 +7,7 @@ function FaqWrap() {
   const [data, setData] = useState([]);
 
   const getData = () => {
-    const endpoint = BASE_URL + '/faqs';
+    const endpoint = import.meta.env.APP_API_BASE_URL + '/faqs';
     fetch(endpoint)
       .then(response => {
         if (!response.ok) {
@@ -44,7 +44,7 @@ function FaqWrap() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(BASE_URL + '/store', {
+      const response = await fetch(import.meta.env.APP_API_BASE_URL + '/store', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -50,7 +50,7 @@ function HeroBanner() {
   const [css , setCss] = useState('');
 
   const getData = () => {
-    let endpoint = BASE_URL + `/banner-upload`;
+    let endpoint = import.meta.env.APP_API_BASE_URL + `/banner-upload`;
     fetch(endpoint)
       .then(response => {
         if (!response.ok) {

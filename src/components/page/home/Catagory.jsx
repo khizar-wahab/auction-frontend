@@ -19,7 +19,7 @@ function Catagory() {
   const [loading, setLoading] = useState(true); 
 
   useEffect(() => {
-    const getCategories = BASE_URL + '/categories';
+    const getCategories = import.meta.env.APP_API_BASE_URL + '/categories';
     fetch(getCategories)
       .then(response => {
         if (!response.ok) {

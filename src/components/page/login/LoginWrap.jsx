@@ -41,7 +41,7 @@ function LoginWrap() {
         return;
       }
     try {
-      const response = await fetch(BASE_URL+'/login', {
+      const response = await fetch(import.meta.env.APP_API_BASE_URL+'/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

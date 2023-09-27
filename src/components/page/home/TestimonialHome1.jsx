@@ -14,7 +14,7 @@ function TestimonialHome1() {
   const [data, setData] = useState([]);
 
   const getData = () => {
-    fetch(`${BASE_URL}/get-testimonial`)
+    fetch(`${import.meta.env.APP_API_BASE_URL}/get-testimonial`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

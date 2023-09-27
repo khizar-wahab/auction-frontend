@@ -48,7 +48,7 @@ function SignUpWrap() {
       return;
     }
     try {
-      const response = await fetch(BASE_URL+'/register', {
+      const response = await fetch(import.meta.env.APP_API_BASE_URL+'/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

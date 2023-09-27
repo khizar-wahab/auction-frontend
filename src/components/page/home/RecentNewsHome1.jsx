@@ -8,7 +8,7 @@ function RecentNewsHome1() {
   const [posts, setPosts] = useState([]);
 
   const getData = () => {
-    const endpoint = BASE_URL + '/articles?limit=2';
+    const endpoint = import.meta.env.APP_API_BASE_URL + '/articles?limit=2';
     fetch(endpoint)
       .then(response => {
         if (!response.ok) {

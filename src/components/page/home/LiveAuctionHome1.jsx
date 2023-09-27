@@ -14,7 +14,7 @@ function LiveAuctionHome1() {
 
   useEffect(() => {
     const fetchAuctions = () => {
-      const getAuctions = BASE_URL + '/auctions?limit=6&status=live';
+      const getAuctions = import.meta.env.APP_API_BASE_URL + '/auctions?limit=6&status=live';
       fetch(getAuctions)
         .then((response) => {
           if (!response.ok) {

@@ -58,7 +58,7 @@ function ContentOfProfile() {
       data.append('password',formData.password)
       data.append('password_confirmation',formData.password_confirmation)
       data.append('image',formData.image)
-      const response = await fetch(BASE_URL+'/profile', {
+      const response = await fetch(import.meta.env.APP_API_BASE_URL+'/profile', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -87,7 +87,7 @@ function ContentOfProfile() {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch(BASE_URL + '/profile', {
+    fetch(import.meta.env.APP_API_BASE_URL + '/profile', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,

@@ -4,7 +4,7 @@ import {BASE_URL} from '../../../config'
 function ContentOfDashboardTab() {
   const [analytics, setAnalytics] = useState([]);
   useEffect(() => {
-    const gatAnalytics = BASE_URL+'/dashboard-analytics';
+    const gatAnalytics = import.meta.env.APP_API_BASE_URL+'/dashboard-analytics';
     const token = localStorage.getItem('token');
     fetch(gatAnalytics, {
       method: 'GET',

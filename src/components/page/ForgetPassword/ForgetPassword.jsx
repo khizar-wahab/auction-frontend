@@ -20,7 +20,7 @@ export default function ForgetPassword() {
 
         setLoading(true);
 
-        const endPoint = BASE_URL + '/forget-password';
+        const endPoint = import.meta.env.APP_API_BASE_URL + '/forget-password';
         fetch(endPoint, {
             method:'POST',
             headers: {
