@@ -129,7 +129,7 @@ function ContentOfProfile() {
         <div className="dashboard-profile">
           <div className="owner">
             <div className="image">
-              <img alt="images" src={userData?.image?"/storage/"+userData.image:"/images/bg/profile-pic.png"} />
+              <img alt="images" src={userData.image_url} />
             </div>
             <div className="content">
               <h3>{formData.first_name?formData.first_name +" ":''}
