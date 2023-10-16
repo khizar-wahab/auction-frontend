@@ -11,16 +11,16 @@ function TopbarHeader() {
     <>
       <div className="topbar">
         <div className="topbar-left d-flex flex-row align-items-center">
-          <h6>Follow Us</h6>
+          {/* <h6>Follow Us</h6>
           <ul className="topbar-social-list gap-2">
             <li><a href="https://www.facebook.com/"><i className="bx bxl-facebook" /></a></li>
             <li><a href="https://www.twitter.com/"><i className="bx bxl-twitter" /></a></li>
             <li><a href="https://www.instagram.com/"><i className="bx bxl-instagram" /></a></li>
             <li><a href="https://www.pinterest.com/"><i className="bx bxl-pinterest-alt" /></a></li>
-          </ul>
+          </ul> */}
         </div>
         <div className="email-area">
-          <h6>Email: <a href="mailto:contact@example.com">contact@example.com</a></h6>
+          {/* <h6>Email: <a href="mailto:contact@example.com">contact@example.com</a></h6> */}
         </div>
         <div className="topbar-right">
           <ul className="topbar-right-list">

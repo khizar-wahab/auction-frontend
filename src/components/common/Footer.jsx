@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "wowjs";
+import WOW from "wowjs";
 import { BASE_URL } from "../../config";
 import moment from "moment";
 function Footer(props) {
@@ -25,7 +25,7 @@ function Footer(props) {
   // }
 
   useEffect(() => {
-    new WOW({
+    new WOW.WOW({
       live: false,
     }).init();
 

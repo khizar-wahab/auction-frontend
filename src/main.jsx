@@ -44,7 +44,7 @@ const components = [
   { path: "/dashboard", component: <Dashboard /> },
   { path: "/blog", component: <Blog /> },
   { path: "/blog-details/:id", component: <BlogDetails /> },
-  { path: "/live-auction", component: <LiveAuction /> },
+  { path: "/live-auction/:search?", component: <LiveAuction /> },
   { path: "/how-works", component: <HowItWork /> },
   { path: "/faq", component: <Faq /> },
   { path: "/join-merchant", component: <Merchant /> },
