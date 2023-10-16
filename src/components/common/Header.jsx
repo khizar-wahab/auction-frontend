@@ -1,6 +1,8 @@
 import React, { useEffect, useReducer, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import TopbarHeader from "./TopbarHeader";
+import axios from 'axios';
+
 
 function Header() {
   const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -73,6 +75,30 @@ function Header() {
         return { activeMenu: "" };
     }
   }
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [showAuctionsList, setShowAuctionsList] = useState(false);
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSearch = (searchQuery) =>{
+    console.log(searchQuery)
+    navigation.navigate('/live-auction/'+ searchQuery)
+  }
+
+  const searchAuctions = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.APP_API_BASE_URL}/search-auctions?query=${searchQuery}`);
+      if(response.data.success==true && response.data.data){
+        setSearchResults(response.data.data);
+
+      }
+    } catch (error) {
+      console.error('Error searching:', error);
+    }
+  };
 
   return (
     <>
@@ -81,11 +107,20 @@ function Header() {
         <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-md-11">
-              <label>What are you lookking for?</label>
-              <input
-                type="text"
-                placeholder="Search Products, Category, Brand"
-              />
+              <div className="row">
+                <div className="col-md-10">
+                  <label>What are you lookking for?</label>
+                  <input
+                    type="text"
+                    placeholder="Search Products, Category, Brand"
+                    value={searchQuery}
+                    onChange={handleSearchInputChange}
+                  />
+                </div>
+                <div className="col-md-2">
+                  <button className="eg-btn btn--primary header-btn mt-4" onClick={()=>handleSearch(searchQuery)}>Search</button>
+                </div>
+              </div>
             </div>
             <div className="col-1 d-flex justify-content-end align-items-center">
               <div className="search-cross-btn " onClick={searchFullScreen}>
