@@ -67,7 +67,7 @@ function SearchAuctionCard() {
               </>
             ) : (
               // Render LiveAuctionCard when loading is false
-             auctions.length>0? (
+              auctions && auctions.length>0? (
               auctions.map(auction => (
                 <div key={auction.id} className="col-lg-4 col-md-6 col-sm-10">
                   <LiveAuctionCard
