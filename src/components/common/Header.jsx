@@ -85,7 +85,8 @@ function Header() {
 
   const handleSearch = (searchQuery) =>{
     console.log(searchQuery)
-    navigation.navigate('/live-auction/'+ searchQuery)
+    // navigation.navigate('/live-auction/'+ searchQuery)
+    window.location.href =`/live-auction/${searchQuery}`
   }
 
   const searchAuctions = async () => {

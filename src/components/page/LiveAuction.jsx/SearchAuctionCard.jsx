@@ -15,7 +15,6 @@ function SearchAuctionCard() {
 
   const url = new URL(window.location.href);
 
-  console.log('Search ki ma ka bosra ',search)
   const getData = () => {
     let endpoint = null;
     endpoint = import.meta.env.APP_API_BASE_URL + '/search-auctions?query=' + search;
