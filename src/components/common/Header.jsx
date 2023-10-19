@@ -78,15 +78,18 @@ function Header() {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [showAuctionsList, setShowAuctionsList] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
   const handleSearch = (searchQuery) =>{
-    console.log(searchQuery)
-    // navigation.navigate('/live-auction/'+ searchQuery)
-    window.location.href =`/live-auction/${searchQuery}`
+    if (searchQuery.trim() !== "") {
+      window.location.href = `/live-auction/${searchQuery}`;
+    } else {
+      setError('Search field is required')
+    }
   }
 
   const searchAuctions = async () => {
@@ -113,10 +116,17 @@ function Header() {
                   <label>What are you lookking for?</label>
                   <input
                     type="text"
-                    placeholder="Search Products, Category, Brand"
+                    placeholder="Search Products"
                     value={searchQuery}
                     onChange={handleSearchInputChange}
                   />
+                  {
+                    error && (
+                      <>
+                        <span className="text-danger">{error}</span>
+                      </>
+                    )
+                  }
                 </div>
                 <div className="col-md-2">
                   <button className="eg-btn btn--primary header-btn mt-4" onClick={()=>handleSearch(searchQuery)}>Search</button>
